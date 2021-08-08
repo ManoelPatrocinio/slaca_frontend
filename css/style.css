@@ -15,6 +15,11 @@ body{
     width: 100vw;
 }
 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /*
@@ -24,7 +29,7 @@ body{
 */
 aside{
     width: 13.75rem;
-    max-width: 13.75rem;
+    min-width: 13.75rem;
     height: 100%;
     min-height: 100vh;
     display: flex;
@@ -62,11 +67,7 @@ aside{
     height: 16.12rem;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 .menu{
     width: 100%;
@@ -104,12 +105,111 @@ img{
 **************
 */
 .conteudo{
-    width: 71.62rem;
+    width: 100%;
     height: 100%;
 }
 .header-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 4.25rem;
     background-color: #FDF1EB;
+    padding: 0 2.25rem;
 }
 
+.header-titles{
+    font-family: var(--font-primary);
+    width: 40.188rem;
+    color: #725C5C;
+}
+
+.header-titles h6{
+    font-size: 1.313rem;
+    font-weight: 400;
+    line-height: 0;
+    margin: 12px 0 5px 0;
+}
+.header-titles small{
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+
+.header-titles span{
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+/*
+**************
+  hearder compo do user pefil 
+**************
+*/
+
+.languageButton{
+    width: 6.063rem;
+    height: 2.125rem;
+}
+
+.languageButton button{
+    background-color: transparent;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+}
+.languageButton img{
+    width: 1.375rem;
+    height: 1.313rem;
+}
+
+.btn-secondary:hover{
+    color: #333333;
+    background-color: transparent;
+}
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    color: #333333;
+    background-color: transparent;
+    box-shadow: 0 0 0 .25rem #FDF1EB;
+}
+.header-info-right{
+    width: 12.625rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-perfil{
+    font-family: var(--font-primary);
+    color: #333333;
+    text-align: right;
+    margin-right: 11px;
+    line-height: 13px;
+}
+.info-perfil p{
+    font-size: 0.875rem;
+    margin: 0;
+}
+.info-perfil span{
+    font-size: 0.75rem;
+}
+
+.imgPerfil{
+    position: relative;
+    width: 1.894rem;
+    height: 1.894rem ;
+    border-radius: 50%;
+}
+.imgPerfil img{
+    width: 1.894rem;
+    height: 1.894rem ;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#notificationIcon{
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    z-index: 200;
+    left: 22px;
+    bottom: 19px;
+}
