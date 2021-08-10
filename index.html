@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"/>
     <title>13 Scala</title>
 </head>
@@ -13,16 +14,16 @@
     <aside class="sidebar">
         <div class="sidebar-sticky">
             <header>SLACA 2019</header>
-            <div class="imgContainer">
-                <img src="./assets/logoAside.svg" alt="13 slaca">
-            </div>
+            <figure class="imgContainer">
+                <img src="./assets/images/logoAside.svg" alt="13 slaca">
+            </figure>
             
             <ul class="nav flex-column menu">
                 <li class="nav-item"><a class="nav-link" href="#">Apresentação</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Comitês</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Autores</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Eixos temáticos</a></li>
-                <li class="nav-item active"><a class="nav-link" href="#">Trabalhos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trabalhos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
             </ul>
         </div>
@@ -38,14 +39,14 @@
             </div>
             <!-- BUTTOM DE IDIOMAS -->
             <div class="dropdown languageButton">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="./assets/languageIcon.svg"  alt="">
+                <button class="btn btn-secondary dropdown-toggle d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./assets/images/languageIcon.svg"  alt="">
                   PT, BR
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">PT-PT</a></li>
-                  <li><a class="dropdown-item" href="#">EN-US</a></li>
-                  <li><a class="dropdown-item" href="#">ES</a></li>
+                  <li><a class="dropdown-item" href="#">Português-PT</a></li>
+                  <li><a class="dropdown-item" href="#">Inglês</a></li>
+                  <li><a class="dropdown-item" href="#">Espanhol</a></li>
                 </ul>
               </div>
               <!-- INFORMAÇÃO DO PERFIL -->
@@ -54,13 +55,64 @@
                     <p>Bem vindo!</p>
                     <span>alguem12@galoascience.com</span>
                 </div>
-                <div class="imgPerfil">
-                    <img id="notificationIcon" src="./assets/notification2.svg" alt="2 notificações">
-                    <img src="./assets/imf_perfil.svg" alt="imagem do perfil">
-                </div>
+                <figure class="imgPerfil">
+                    <img id="notificationIcon" src="./assets/images/notification2.svg" alt="2 notificações">
+                    <img src="./assets/images/imf_perfil.svg" alt="imagem do perfil">
+                </figure>
             </div>
 
         </header>
+
+        <main class="conteudo_video_detalhes">
+            <header class="header_video_detalhes d-flex"> 
+                <h4>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h4> 
+                <div class="iconeOptions d-block">
+                    <div class="d-flex">
+                        <a href="./assets/docs/galoa-proceedings--slaca-2019--115746.pdf" class="btn btn-lg btn-primary d-flex btn-block download-button" download >
+                            <i class="fa fa-download "></i>
+                            Download
+                        </a>
+                        <a class="btn  btn-primary btn-block favorit_button d-flex"><i class="fas fa-star"></i></a>
+                        <a class="btn  btn-primary btn-block favorit_button d-flex"><img src="./assets/images/doi.svg"></img></a>
+                     </div>
+                    <a class="text_link">COMO CITAR ESSE TRABALHO ?</a>
+                </div>
+            </header>
+            <div class="container_video_datalhes">
+                <div class="video_container">
+                    <!-- <iframe class="video_play" src="https://www.youtube.com/embed/pqrUQrAcfo4" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe> -->
+                    <img src="./assets/images/img_video.png" class="overlay" alt="">
+                
+                </div>
+                <div class="detalhes_container">
+                    <header>Destalhes</header>
+                    <div class="text_detalhes">
+                        <li>Tipo de Apresentação: <b> Pôster</b></li>
+                        <li> Eixo temático: <b> ação e saúde (AS)</b> </li>
+                        <li>Palavras-chaves: <b>Alimentos funcionais, alimentação escolar.</b></li>
+
+                        <ul class="detalhes_list_autores">
+                            <strong>Autores:</strong>
+                            <li>Galileo Galilei¹</li>
+                            <li>Berta Lange de Morretes²</li>
+                            <li>Isaac Newton³</li>
+                            <li>Cesar Lattes¹</li>
+                            <li>Stephen Hawking⁴</li>
+                        </ul>
+                        <ul class="detalhes_list_universidade">
+                           <li> ¹Universidade Estadual de Campinas</li>
+                           <li> ²Universidade de São Paulo</li>
+                           <li> ³Instituto Nacional de Pesquisas Espaciais</li>
+                           <li> ⁴Universidade Federal do Rio de Janeiro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
         
     </section>
   

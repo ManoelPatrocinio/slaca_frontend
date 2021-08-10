@@ -13,6 +13,7 @@
 body{
     display: flex;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 img{
@@ -41,7 +42,7 @@ aside{
 
 .sidebar-sticky{
     width: 100%;
-    height: 33.5rem;
+    height: auto;
     
 }
 
@@ -67,8 +68,6 @@ aside{
     height: 16.12rem;
 }
 
-
-
 .menu{
     width: 100%;
 }
@@ -77,7 +76,7 @@ aside{
     width: 100%;
     height: 2.18rem;
     border-bottom: 2px solid #E7E7E7;
-    
+    transition: all 0.2s;
 }
 
 .menu .nav-item a{
@@ -91,8 +90,11 @@ aside{
     align-items: center;
     padding:.5rem 0rem;
 }
-
-.active{
+.nav-item:hover {
+    padding-left: 10px;
+    background-color: #FDF1EB;
+}
+.nav-item:clicked{
     background-color: #FDF1EB;
     border-left: 5px solid #ED7839 ;
  
@@ -155,6 +157,8 @@ aside{
     background-color: transparent;
     color: #333333;
     border: 1px solid #CCCCCC;
+    justify-content: center;
+    align-items: center;
 }
 .languageButton img{
     width: 1.375rem;
@@ -198,6 +202,7 @@ aside{
     width: 1.894rem;
     height: 1.894rem ;
     border-radius: 50%;
+    margin: 0;
 }
 .imgPerfil img{
     width: 1.894rem;
@@ -212,4 +217,134 @@ aside{
     z-index: 200;
     left: 22px;
     bottom: 19px;
+}
+/*
+**************
+  comteudo principal da pagina(video e detalhes)
+**************
+*/
+
+.conteudo_video_detalhes{
+    width: 66.188rem;
+    height: 32rem;
+    margin: 0px 45px;
+    display: block;
+}
+.header_video_detalhes{
+    width: 100%;
+    font-family: var(--font-primary);
+    margin: 20px 0 19px 0;
+    justify-content: space-between;
+}
+
+
+.iconeOptions .btn{
+    margin-left: 5px;
+    background: #ED7839;
+    border: none;
+    height: 1.938rem;
+}
+
+.download-button{
+    align-items: center;
+    text-align: center;
+    width: 7.5rem;
+    
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 501;
+    font-family: var(--font-primary);
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+.download-button i{
+    margin-right: 5px;
+}
+.iconeOptions .btn:hover{
+    background-color: #FFB455;
+}
+.iconeOptions .text_link{
+    display: block;
+    text-align: right;
+    margin-top: 0.75rem;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    color: #ED7839;
+}
+.header_video_detalhes h4{
+    width: 48.125rem;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ED7839;
+    text-align: left;
+}
+.container_video_datalhes{
+    width: 100%;
+    height: 27.438rem;
+    display: flex;
+    justify-content: space-between;
+}
+.video_container{
+    width: 48rem;
+    height: 100%;
+    background: linear-gradient(0deg,#ED7839 0%,#FFB455 100%);
+}
+.video_container img{
+    opacity: .6;
+}
+
+.detalhes_container{
+    width: 15.125rem;
+    height: 27.438rem;
+    margin-left: 1.938rem;
+    border: 1px solid #ECECEC;
+    border-radius: 3px 3px 0px 0px;
+}
+.detalhes_container header{
+    width: 15.125rem;
+    height: 2.813rem;
+    background: #FDF1EB;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 3px 3px 0px 0px;
+    color: #4E4E4E;
+    font-family: var(--font-primary);
+    font-weight: 501;
+    font-size: 1.25rem;
+    padding: 11px 15px 9px 15px;
+}
+
+.text_detalhes{
+    padding: 15px 10px;
+    overflow-y: auto;
+    width: 15.125rem;
+    height: 89%;
+    max-height: 90%;
+
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+
+}
+
+.text_detalhes li{
+    font-size: 14px;
+    font-style: normal;
+
+}
+.text_detalhes b{
+    font-size: 13px;
+}
+
+.detalhes_list_autores{
+    margin: 1rem 0 2rem 0;
+    padding: 0;
+}
+
+.detalhes_list_universidade{
+    padding-left: 0px;
+    
+}
+.detalhes_list_universidade li{
+    font-size: 0.75rem;
+    color: #464343B3;
 }
