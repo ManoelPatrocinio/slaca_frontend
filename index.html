@@ -19,16 +19,16 @@
             </figure>
             
             <ul class="nav flex-column menu">
-                <li class="nav-item"><a class="nav-link" href="#">Apresentação</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Comitês</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Autores</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Eixos temáticos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Trabalhos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                <li class="nav-item" id="Apresentacao"><a class="nav-link" href="#">Apresentação</a></li>
+                <li class="nav-item" id="Comites"><a class="nav-link" href="#">Comitês</a></li>
+                <li class="nav-item" id="Autores"><a class="nav-link" href="#">Autores</a></li>
+                <li class="nav-item" id="Eixos"><a class="nav-link" href="#">Eixos temáticos</a></li>
+                <li class="nav-item" id="Trabalhos"><a class="nav-link" href="#">Trabalhos</a></li>
+                <li class="nav-item" id="Contato"><a class="nav-link" href="#">Contato</a></li>
             </ul>
         </div>
     </aside>
-    <section class="conteudo">
+    <section class="conteudo d-flex">
         <header class="header-principal">
             <!-- TITULO DA SESSÃO -->
             <div class="header-titles">
@@ -113,10 +113,34 @@
             </div>
            
         </main>
-        
+        <section class="cantainer resumo">
+            <header class="resumo_header">
+                Resumo
+            </header>
+                <p>
+                <a class="resumo_text_inicial" data-bs-toggle="collapse" href="#collapseResumo" role="button" aria-expanded="false" aria-controls="collapseResumo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris,
+                     egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet.
+                      Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus.
+                       Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
+                    <span class="ver" id="verMais">ver mais</span>
+                </a>
+            </p>
+                <div class="collapse" id="collapseResumo">
+                  
+                    <p>Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.</p>
+                    
+                    <p>Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.</p>
+                    
+                    <p>Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <span class="ver" id="verMenos">ver menos</span>
+                </div>
+            
+        </section>
+        <section class="container discursao"></section>
     </section>
   
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
 </html>

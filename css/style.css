@@ -31,7 +31,6 @@ img{
 aside{
     width: 13.75rem;
     min-width: 13.75rem;
-    height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -94,7 +93,7 @@ aside{
     padding-left: 10px;
     background-color: #FDF1EB;
 }
-.nav-item:clicked{
+.active{
     background-color: #FDF1EB;
     border-left: 5px solid #ED7839 ;
  
@@ -109,6 +108,7 @@ aside{
 .conteudo{
     width: 100%;
     height: 100%;
+    flex-direction: column;
 }
 .header-principal{
     display: flex;
@@ -203,6 +203,7 @@ aside{
     height: 1.894rem ;
     border-radius: 50%;
     margin: 0;
+    cursor: pointer;
 }
 .imgPerfil img{
     width: 1.894rem;
@@ -227,11 +228,12 @@ aside{
 .conteudo_video_detalhes{
     width: 66.188rem;
     height: 32rem;
-    margin: 0px 45px;
+    margin: 0rem 2.813rem;
     display: block;
 }
 .header_video_detalhes{
     width: 100%;
+    height: 3.375rem;
     font-family: var(--font-primary);
     margin: 20px 0 19px 0;
     justify-content: space-between;
@@ -266,10 +268,13 @@ aside{
 .iconeOptions .text_link{
     display: block;
     text-align: right;
-    margin-top: 0.75rem;
+    margin-top: 10px;
     font-family: var(--font-primary);
     font-size: 0.875rem;
     color: #ED7839;
+    font-weight: 501;
+    padding: 0;
+    
 }
 .header_video_detalhes h4{
     width: 48.125rem;
@@ -347,4 +352,54 @@ aside{
 .detalhes_list_universidade li{
     font-size: 0.75rem;
     color: #464343B3;
+}
+
+/*
+**************
+  Stilo do sessão de resumo
+**************
+*/
+
+.resumo{
+    width: 66.188rem;
+    height: auto;
+    margin: 1.875rem 2.813rem;
+    
+}
+
+.resumo_header{
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #FDF1EB;
+}
+
+.resumo p,a{
+    padding: 15px;
+    font-size: 0.875rem;
+    font-family: var(--font-primary);  
+    font-style: normal;
+    font-weight: normal;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #5C5C5C;
+    margin: 0;
+
+}
+
+.resumo_text_inicial:hover{
+    color: #5C5C5C;
+}
+.ver{
+    color: #ED7839 ;
+    font-size: 0.875rem;
+    font-family: var(--font-primary);  
+    font-weight: 501;
+    padding-left: 15px;
+}
+
+#verMenos{
+    cursor: pointer;
 }
