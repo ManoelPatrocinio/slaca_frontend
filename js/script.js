@@ -20,3 +20,25 @@ document.querySelector("#verMenos").addEventListener("click", () => {
     document.querySelector("#verMais").classList.toggle("collapse");
 });
 
+// eventos para criar novo topico de discursão
+
+
+document.querySelector("#btnNovoTopicoInicial").addEventListener("click", () => {
+    document.querySelector("#NovoTopico").classList.add("disabled");
+    document.querySelector(".form_new_question").classList.add("activate");
+});
+
+document.querySelector("#btnEnviarNewTopico").addEventListener("click", () => {
+    document.querySelector(".form_new_question").classList.remove("activate");
+    document.querySelector(".topico_enviado").classList.add("activate");
+});
+
+document.querySelector("#btnNovoTopicoSecundario").addEventListener("click", () => {
+    document.querySelector(".topico_enviado").classList.remove("activate");
+    document.querySelector(".form_new_question").classList.add("activate");
+    document.querySelector("#inputAssunto").value=''
+    document.querySelector("#textAreaConteudo").value=''
+});
+
+
+

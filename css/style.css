@@ -9,6 +9,7 @@
 
 :root {
     --font-primary: "Quicksand";
+    --color-primary: #ED7839;
 }
 body{
     display: flex;
@@ -23,20 +24,21 @@ img{
 }
 
 
+
 /*
 **************
   Stilo do asider
 **************
 */
 aside{
-    width: 13.75rem;
-    min-width: 13.75rem;
+    width: 16%;
+    /* min-width: 13.75rem; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    position: fixed;
 }
 
 .sidebar-sticky{
@@ -73,7 +75,7 @@ aside{
 
 .menu .nav-item{
     width: 100%;
-    height: 2.18rem;
+    /* height: 2.18rem; */
     border-bottom: 2px solid #E7E7E7;
     transition: all 0.2s;
 }
@@ -95,7 +97,7 @@ aside{
 }
 .active{
     background-color: #FDF1EB;
-    border-left: 5px solid #ED7839 ;
+    border-left: 5px solid --color-primary ;
  
 }
 
@@ -106,9 +108,10 @@ aside{
 **************
 */
 .conteudo{
-    width: 100%;
+    width: 84%;
     height: 100%;
     flex-direction: column;
+    margin-left: 16%;
 }
 .header-principal{
     display: flex;
@@ -242,7 +245,7 @@ aside{
 
 .iconeOptions .btn{
     margin-left: 5px;
-    background: #ED7839;
+    background: var(--color-primary);
     border: none;
     height: 1.938rem;
 }
@@ -271,7 +274,7 @@ aside{
     margin-top: 10px;
     font-family: var(--font-primary);
     font-size: 0.875rem;
-    color: #ED7839;
+    color: var(--color-primary);
     font-weight: 501;
     padding: 0;
     
@@ -280,7 +283,7 @@ aside{
     width: 48.125rem;
     font-size: 1.25rem;
     font-weight: 900;
-    color: #ED7839;
+    color: var(--color-primary);
     text-align: left;
 }
 .container_video_datalhes{
@@ -360,14 +363,15 @@ aside{
 **************
 */
 
-.resumo{
+.container_secondary{
     width: 66.188rem;
     height: auto;
     margin: 1.875rem 2.813rem;
-    
+    border: 1px solid #ECECEC;
+    border-radius: 3px 3px 0px 0px;
 }
 
-.resumo_header{
+.header_secondary{
     width: 100%;
     font-family: var(--font-primary);
     font-size: 1.25rem;
@@ -376,7 +380,7 @@ aside{
     background-color: #FDF1EB;
 }
 
-.resumo p,a{
+.container_resumo p,a{
     padding: 15px;
     font-size: 0.875rem;
     font-family: var(--font-primary);  
@@ -393,7 +397,7 @@ aside{
     color: #5C5C5C;
 }
 .ver{
-    color: #ED7839 ;
+    color: var(--color-primary) ;
     font-size: 0.875rem;
     font-family: var(--font-primary);  
     font-weight: 501;
@@ -402,4 +406,396 @@ aside{
 
 #verMenos{
     cursor: pointer;
+}
+
+/*
+**************
+  Stilo do sessão de discursões
+**************
+*/
+.disabled{
+    display: none !important;
+    transition: all 0.3s;
+}
+
+.activate{
+    display: flex !important;
+    flex-direction: column;
+    transition: all 0.3s
+}
+
+
+#NovoTopico{
+    
+    position: relative;
+    width: 64.188rem;
+    border-bottom: 1px solid #E7E7E7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.875rem auto;
+    transition: all 0.2s;
+}
+
+#NovoTopico h5{
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    margin-top: 1rem;
+}
+
+.list_icons{
+    width: 16.141rem;
+    justify-content: space-between;
+}
+
+.list_icons img{
+    width: 3.141rem;
+    height: 3.059rem;
+}
+
+#NovoTopico p{
+    width: 39.125rem;
+    margin: 2.225rem 0 1.938rem 0;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    line-height: 19px;
+    text-align: center;
+    color: #595959
+}
+
+#NovoTopico .btn{
+    font-family: var(--font-primary);
+    font-size: 16px;
+    align-items: center;
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+    bottom: -1rem;
+}
+
+#NovoTopico .btn i{
+    margin-right: 4px;
+}
+
+/* 
+* style do formulário para adicionar novo topico de discursão
+*/
+.form_new_question{
+    display:none;
+    position: relative;
+    width: 64.188rem;
+    border-bottom: 1px solid #E7E7E7;
+    flex-direction: column;
+    justify-content: center;
+   
+    margin: 1rem auto 1.875rem auto;
+ 
+}
+
+.form_new_question header{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;  
+    text-align: center;
+    color: #5C5C5C;
+}
+.form_new_question label{
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 19px;
+    color: #ED7839;
+
+}
+
+.form_new_question input{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+#inputAssunto::placeholder {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #4D4D4D;
+}
+#textAreaConteudo{
+    border-radius: .25rem .25rem 0 0;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+.buttonSendDuvida{
+    background: #EAF1F2;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 0px 0px 4px 4px;
+    justify-content: space-between;
+}
+
+.iconsFormatText img{
+    width: 12px;
+    height: 10px;
+    margin-left: 29px;
+    cursor: pointer;
+}
+
+.buttonSendDuvida button{
+    width: 205px;
+    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+    border-radius: 0px 0px 4px 0px;
+    justify-content: center;
+    border: none;
+}
+/*
+**************
+  Stilo dos cards de topico enviado com sucesso
+**************
+*/
+.topico_enviado{
+    display: none;
+}
+.cardmesagemSucesso{
+
+    position: relative;
+    width: 64.188rem;
+    border-bottom: 1px solid #E7E7E7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1.875rem auto;
+    padding: 1rem;
+}
+.cardmesagemSucesso header{
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+.cardmesagemSucesso p{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #595959;
+    margin:  18px 0 29px 0;
+}
+
+.cardmesagemSucesso a{
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    text-decoration-line: underline !important;
+    color: #F48F44 !important;
+}
+
+.cardmesagemSucesso button{
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    position: absolute;
+    bottom: -1rem;
+
+    
+}
+
+.card_edit_topico{
+    display: none;
+    width: 64.188rem;
+    background: #DDDDDD70;
+    border-bottom: 1px solid #E7E7E7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin:0 auto 1.063rem auto;
+    padding:  35px 0;
+    text-align: center;
+
+}
+
+.card_edit_topico img{
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-bottom:  7px;
+}
+
+.card_edit_topico p{
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #707070;
+}
+
+.card_edit_topico a{
+    font-family: Segoe UI, sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline !important;
+    color: #ED7839;
+}
+/*
+**************
+  Stilo dos cards de discursões
+**************
+*/
+
+.card_discursoes{
+    width: 64.188rem;
+    border-bottom: 1px solid #E7E7E7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin:0 auto 1.063rem auto;
+
+}
+.card_discursoes a:hover{
+    color: #4D4D4D;
+
+}
+
+.card_pergunta{
+    padding: 17px;
+ 
+}
+
+.card_pergunta header h5{
+    font-family: var(--font-primary);
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin: 0;
+}
+.discursoes_autor{
+    font-family: var(--font-primary);
+    font-weight: 501;
+    font-size: 0.75rem;
+    color: #5C5C5C;
+}
+
+.discursoes_paragrafo{
+    width: 61.292rem;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #4D4D4D;
+    margin: 10px 0;
+}
+
+.card_footer{
+    align-items: center;
+}
+#moreOptions{
+    background-color: transparent;
+    border: none; 
+    color: var(--color-primary);
+    margin-right: 1rem;
+}
+
+#favoritar{
+    width: 1.688rem;
+    height: 1.188rem;
+    background: #ED7839;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.card_footer span{
+    font-family: Segoe UI, sans-serif;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 14px;
+    line-height: 19px;
+    color: #757575;
+    margin-right: 1rem;
+
+}
+
+.card_respostas_autor_coauto{
+    background: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 1.125rem 1.438rem 2.188rem 1.438rem;
+}
+
+.card_respostas_autor_coauto header{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cargo span{
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-right: 2.125rem;
+}
+
+
+/*
+**************
+  Stilo do footer principal
+**************
+*/
+
+
+.footer_principal{
+    width: 67.875rem;
+    border-top: 1px solid #E7E7E7;
+    flex-direction: row;
+    margin: 3.125rem auto 0 auto;
+    padding: 0 36px;
+    position: relative;
+}
+.logo_saibaMais button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #71478E;
+    border-radius: 5px;
+    color: #FFF;
+    margin: 0 auto;
+    padding: calc(10px / 2);
+    width: 200px;
+    border: none;
+}
+.logo_saibaMais button:hover{
+    text-decoration: underline !important;
+    background-color: #71478E;
+}
+#logoFooter{
+    width: 12.5rem;
+    height: 5.313rem;
+    margin: 15px;
+}
+
+.footerProposito{
+    padding: 15px;
+    margin-bottom: 2.25rem;
+}
+.footerProposito p{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #5C5C5C;
+    margin-top: 10px;
 }
