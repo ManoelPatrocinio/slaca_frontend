@@ -81,7 +81,6 @@ img{
 
 .menu .nav-item{
     width: 100%;
-    /* height: 2.18rem; */
     border-bottom: 2px solid #E7E7E7;
     transition: all 0.2s;
 }
@@ -103,7 +102,7 @@ img{
 }
 .active{
     background-color: #FDF1EB;
-    border-left: 5px solid --color-primary ;
+    border-left: 5px solid #F48F44 ;
  
 }
 .hamburguer{
@@ -143,78 +142,6 @@ img{
 
 }
 
-@media(max-width:992px){
-
-    .hamburguer{
-        display: flex !important;
-    }
-    
-    .sidebar-sticky{
-
-        left: -25%;
-        transition:  all 0.5s;
-        
-    }
-    .conteudo{
-        width: 100%;
-        margin-left: 0 !important;
-    }
-
-    .header-principal{
-        position: fixed;
-
-        z-index: 97;
-        background: linear-gradient(
-            0deg
-            ,#ED7839 0%,#FFB455 100%);
-    }
-    .header-titles{
-        display: none;
-    }
-
-    .languageButton{
-        display: none;
-    }
-
-    #iconeSlacaMobile{
-        visibility: visible !important;
-        margin: 0 auto 0 40% !important;
-    }
-    .info-perfil{
-        color: #fff !important;
-    }
-
-    .conteudo_video_detalhes{
-        margin-top: 5% !important;
-    }
-
-    .container_video_datalhes{
-        flex-direction: column !important;
-    }
-    .video_container{
-        width: 100% !important;
-    }
-
-    .detalhes_container{
-        width: 100% !important;
-        height: 27.438rem;
-        margin: 1rem 0 0 0 !important; 
-        border: 1px solid #ECECEC;
-        border-radius: 3px 3px 0px 0px;
-    }
-
-    .header_video_detalhes{
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: right;
-    }
-    .header_video_detalhes h4{
-        width: 100% !important;
-        margin-bottom: 1rem;
-    }
-  
-
-}
 
 /*
 **************
@@ -354,7 +281,7 @@ img{
 }
 /*
 **************
-  comteudo principal da pagina(video e detalhes)
+  conteudo principal da pagina(video e detalhes)
 **************
 */
 
@@ -409,6 +336,7 @@ img{
     color: var(--color-primary);
     font-weight: 501;
     padding: 0;
+    cursor: pointer;
     
 }
 .header_video_detalhes h4{
@@ -425,6 +353,7 @@ img{
 .video_container{
     width: 48rem;
     background: linear-gradient(0deg,#ED7839 0%,#FFB455 100%);
+    cursor: pointer;
 }
 .video_play{
     width: 100%;
@@ -826,6 +755,10 @@ img{
     margin: 10px 0;
 }
 
+.reticencia{
+    color: #ed7839;
+    font-weight: 700;
+}
 .card_footer{
     align-items: center;
 }
@@ -930,3 +863,169 @@ img{
     color: #5C5C5C;
     margin-top: 10px;
 }
+
+
+/* layout para tablet */
+
+@media(max-width:992px){
+
+    .hamburguer{
+        display: flex !important;
+    }
+    
+    .sidebar-sticky{
+
+        left: -25%;
+        transition:  all 0.5s;
+        
+    }
+    .conteudo{
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .header-principal{
+        position: fixed;
+
+        z-index: 97;
+        background: linear-gradient(
+            0deg
+            ,#ED7839 0%,#FFB455 100%);
+    }
+    .header-titles{
+        display: none;
+    }
+
+    .languageButton{
+        display: none;
+    }
+
+    #iconeSlacaMobile{
+        visibility: visible !important;
+        margin: 0 auto 0 40% !important;
+    }
+    .info-perfil{
+        color: #fff !important;
+    }
+
+    .conteudo_video_detalhes{
+        margin-top: 5% !important;
+    }
+
+    .container_video_datalhes{
+        flex-direction: column !important;
+    }
+    .video_container{
+        width: 100% !important;
+    }
+
+    .detalhes_container{
+        width: 100% !important;
+        height: 27.438rem;
+        margin: 1rem 0 0 0 !important; 
+        border: 1px solid #ECECEC;
+        border-radius: 3px 3px 0px 0px;
+    }
+
+    .header_video_detalhes{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: right;
+    }
+    .header_video_detalhes h4{
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+  
+
+}
+/* layout para smartphones */
+
+@media(max-width:575.98px){
+    body{
+        background-color: #fff !important;
+    }
+    .hamburguer{
+        display: flex !important;
+    }
+    
+    .sidebar-sticky{
+
+        left: -50%;
+        transition:  all 0.5s;
+        
+    }
+    .conteudo{
+        width: 100vw;
+        margin-left: 0 !important;
+    }
+
+    .header-principal{
+        position: fixed;
+        width: 100vw !important;
+        max-height: 55px !important;
+        height: 55px !important;
+        z-index: 97;
+        background: linear-gradient(
+            0deg
+            ,#ED7839 0%,#FFB455 100%);
+    }
+    .header-titles{
+        display: none;
+    }
+
+    .languageButton{
+        display: none;
+    }
+
+    #iconeSlacaMobile{
+        visibility: visible !important;
+        margin: 0 auto 0 !important;
+    }
+    #iconeSlacaMobile h4{
+        margin-bottom: 0 !important;
+        line-height: 10px;
+    }
+    .info-perfil{
+       display: none !important;
+    }
+
+    .conteudo_video_detalhes{
+        margin: 55px 0px 0px 0px !important;
+        width: 100vw !important;
+        padding: 0 5% !important;
+    }
+
+    .container_video_datalhes{
+        flex-direction: column !important;
+    }
+    .video_container{
+        width: 100% !important;
+    }
+
+    .detalhes_container{
+        width: 100% !important;
+        height: 27.438rem;
+        margin: 1rem 0 0 0 !important; 
+        border: 1px solid #ECECEC;
+        border-radius: 3px 3px 0px 0px;
+    }
+
+    .header_video_detalhes{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: right;
+    }
+    .header_video_detalhes h4{
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+    .container_secondary{
+        margin: 1.875rem 1rem !important;
+    }
+
+    .footer_principal{
+        flex-direction: column !important;
+    }
+  
+ }

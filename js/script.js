@@ -13,6 +13,7 @@ document.querySelector(".sidebar_background").addEventListener("click", () =>{
 
     
 
+// evento hover do navbar, adicina border-left
 
 let li = document.querySelectorAll(".nav-item ");
 for (var i = 0; i < li.length; i++) {
@@ -34,6 +35,10 @@ document.querySelector("#verMenos").addEventListener("click", () => {
 
 // eventos para criar novo topico de discursão
 
+document.querySelector(".discursoes_paragrafo a").addEventListener("click", () => {
+    document.querySelector(".reticencia").classList.toggle("collapse");
+   
+});
 
 document.querySelector("#btnNovoTopicoInicial").addEventListener("click", () => {
     document.querySelector("#NovoTopico").classList.add("disabled");
