@@ -1,6 +1,18 @@
-// let li = document.querySelector(".nav-item").addEventListener("click", () => {
-//     document.querySelector("#Trabalhos").classList.toggle("active");
-// });
+// evento de mostrar ou ocultar aside
+
+document.querySelector(".hamburguer").addEventListener("click", () => {
+    document.querySelector(".sidebar-sticky").classList.toggle("show-menu")
+    document.querySelector(".sidebar_background").classList.toggle("background")
+});
+
+document.querySelector(".sidebar_background").addEventListener("click", () =>{
+    document.querySelector(".sidebar-sticky").classList.toggle("show-menu")
+    document.querySelector(".sidebar_background").classList.toggle("background")
+})
+
+
+    
+
 
 let li = document.querySelectorAll(".nav-item ");
 for (var i = 0; i < li.length; i++) {

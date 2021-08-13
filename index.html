@@ -11,24 +11,33 @@
 </head>
 <body>
     
-    <aside class="sidebar">
-        <div class="sidebar-sticky">
-            <header>SLACA 2019</header>
-            <figure class="imgContainer">
-                <img src="./assets/images/logoAside.svg" alt="13 slaca">
-            </figure>
-            
-            <ul class="nav flex-column menu">
-                <li class="nav-item" id="Apresentacao"><a class="nav-link" href="#">Apresentação</a></li>
-                <li class="nav-item" id="Comites"><a class="nav-link" href="#">Comitês</a></li>
-                <li class="nav-item" id="Autores"><a class="nav-link" href="#">Autores</a></li>
-                <li class="nav-item" id="Eixos"><a class="nav-link" href="#">Eixos temáticos</a></li>
-                <li class="nav-item" id="Trabalhos"><a class="nav-link" href="#">Trabalhos</a></li>
-                <li class="nav-item" id="Contato"><a class="nav-link" href="#">Contato</a></li>
-            </ul>
-        </div>
+    <aside >
+        <section class="sidebar_background ">
+            <div class="sidebar-sticky col-2">
+                <header>SLACA 2019</header>
+                <div class="imgContainer">
+                    <img src="./assets/images/logoAside.svg" alt="13 slaca">
+                </div>
+                
+                <ul class="nav flex-column menu">
+                    <li class="nav-item" id="Apresentacao"><a class="nav-link" href="#">Apresentação</a></li>
+                    <li class="nav-item" id="Comites"><a class="nav-link" href="#">Comitês</a></li>
+                    <li class="nav-item" id="Autores"><a class="nav-link" href="#">Autores</a></li>
+                    <li class="nav-item" id="Eixos"><a class="nav-link" href="#">Eixos temáticos</a></li>
+                    <li class="nav-item" id="Trabalhos"><a class="nav-link" href="#">Trabalhos</a></li>
+                    <li class="nav-item" id="Contato"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </section>
     </aside>
-    <section class="conteudo d-flex">
+    <div class="hamburguer">
+        
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+
+    </div>
+    <section class="conteudo d-flex col-10">
         <header class="header-principal">
             <!-- TITULO DA SESSÃO -->
             <div class="header-titles">
@@ -37,20 +46,25 @@
                 <span>ISSN: 1234-5678</span>
     
             </div>
-            <!-- BUTTOM DE IDIOMAS -->
-            <div class="dropdown languageButton">
-                <button class="btn btn-secondary dropdown-toggle d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="./assets/images/languageIcon.svg"  alt="">
-                  PT, BR
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Português-PT</a></li>
-                  <li><a class="dropdown-item" href="#">Inglês</a></li>
-                  <li><a class="dropdown-item" href="#">Espanhol</a></li>
-                </ul>
-              </div>
+            <!-- logo central do layout mobile -->
+         
+            <div  id="iconeSlacaMobile">
+                <h4>SLACA 2019</h4>
+                <span>ISSN: 1234-5678</span>
+            </div>  
               <!-- INFORMAÇÃO DO PERFIL -->
             <div class="header-info-right">
+                <div class="dropdown languageButton">
+                    <button class="btn btn-secondary dropdown-toggle d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/images/languageIcon.svg"  alt="">
+                      PT, BR
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Português-PT</a></li>
+                      <li><a class="dropdown-item" href="#">Inglês</a></li>
+                      <li><a class="dropdown-item" href="#">Espanhol</a></li>
+                    </ul>
+                </div>
                 <div class="info-perfil">
                     <p>Bem vindo!</p>
                     <span>alguem12@galoascience.com</span>
@@ -147,7 +161,7 @@
                   <img src="./assets/images/discursaoicone2.svg" alt="">
                   <img src="./assets/images/discursaoicone3.svg" alt="">
                 </div>
-                <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+                <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? <br> Deixe seus questionamentos ou sugestões para o autor!</p>
                 <button class="btn  btn-primary  d-flex" id="btnNovoTopicoInicial" > <i class="fas fa-plus"></i> criar tópico</button>
             </div>
             <div class="form_new_question">
